@@ -35,20 +35,14 @@ export default function ProductCard({ product }) {
       <div>
         {/* Large Product Image Frame */}
         <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-slate-50 dark:bg-slate-800/60 mb-3 flex items-center justify-center">
-          {product.image && !imageError ? (
-            <img
-              src={product.image}
-              alt={product.name}
-              referrerPolicy="no-referrer"
-              onError={() => setImageError(true)}
-              className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-300 ease-out"
-              loading="lazy"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-400 text-xs font-medium">
-              {product.name}
-            </div>
-          )}
+          <img
+            src={!imageError && product.image ? product.image : '/assets/images/placeholder.svg'}
+            alt={product.name}
+            referrerPolicy="no-referrer"
+            onError={() => setImageError(true)}
+            className="w-full h-full object-cover object-center group-hover:scale-104 transition-transform duration-300 ease-out"
+            loading="lazy"
+          />
 
           {/* Small Wishlist Icon (Top Right) */}
           <button

@@ -22,7 +22,7 @@ export const MOCK_PRODUCTS = [
     discount: 24,
     rating: 4.9,
     reviewCount: 428,
-    image: '/src/assets/images/product_wireless_headphones_1790860169383.jpg',
+    image: '/assets/images/product_wireless_headphones_1790860169383.jpg',
     stock: 28,
     isFeatured: true,
     isNew: false,
@@ -46,7 +46,7 @@ export const MOCK_PRODUCTS = [
     discount: 16,
     rating: 4.8,
     reviewCount: 312,
-    image: '/src/assets/images/product_minimalist_watch_1790860181229.jpg',
+    image: '/assets/images/product_minimalist_watch_1790860181229.jpg',
     stock: 14,
     isFeatured: true,
     isNew: true,
@@ -70,7 +70,7 @@ export const MOCK_PRODUCTS = [
     discount: 20,
     rating: 4.9,
     reviewCount: 189,
-    image: '/src/assets/images/product_leather_backpack_1790860192374.jpg',
+    image: '/assets/images/product_leather_backpack_1790860192374.jpg',
     stock: 35,
     isFeatured: true,
     isNew: false,
@@ -94,7 +94,7 @@ export const MOCK_PRODUCTS = [
     discount: 20,
     rating: 4.7,
     reviewCount: 204,
-    image: '/src/assets/images/promo_lifestyle_smart_speaker_1790860204196.jpg',
+    image: '/assets/images/promo_lifestyle_smart_speaker_1790860204196.jpg',
     stock: 19,
     isFeatured: true,
     isNew: true,
@@ -166,7 +166,7 @@ export const MOCK_PRODUCTS = [
     discount: 20,
     rating: 4.7,
     reviewCount: 143,
-    image: 'https://images.unsplash.com/photo-1608248597359-009761e3d36b?w=800&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&auto=format&fit=crop&q=80',
     stock: 40,
     isFeatured: false,
     isNew: false,
@@ -453,7 +453,7 @@ export const MOCK_ORDERS = [
         name: 'AcousticPure Wireless ANC Headphones',
         price: 249,
         quantity: 1,
-        image: '/src/assets/images/product_wireless_headphones_1790860169383.jpg'
+        image: '/assets/images/product_wireless_headphones_1790860169383.jpg'
       },
       {
         id: 'prod-014',
@@ -490,7 +490,7 @@ export const MOCK_ORDERS = [
         name: 'AeroChronos Sapphire Minimalist Watch',
         price: 185,
         quantity: 1,
-        image: '/src/assets/images/product_minimalist_watch_1790860181229.jpg'
+        image: '/assets/images/product_minimalist_watch_1790860181229.jpg'
       }
     ],
     subtotal: 185,

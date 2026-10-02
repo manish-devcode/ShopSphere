@@ -25,7 +25,7 @@ export const INITIAL_ORDERS = [
         categoryLabel: 'Electronics',
         price: 249,
         quantity: 1,
-        image: '/src/assets/images/product_wireless_headphones_1790860169383.jpg'
+        image: '/assets/images/product_wireless_headphones_1790860169383.jpg'
       },
       {
         id: 'prod-014',
@@ -33,7 +33,7 @@ export const INITIAL_ORDERS = [
         categoryLabel: 'Accessories',
         price: 49,
         quantity: 1,
-        image: '/src/assets/images/product_leather_backpack_1790860192374.jpg'
+        image: '/assets/images/product_leather_backpack_1790860192374.jpg'
       }
     ],
     deliveryAddress: {
@@ -75,7 +75,7 @@ export const INITIAL_ORDERS = [
         categoryLabel: 'Accessories',
         price: 185,
         quantity: 1,
-        image: '/src/assets/images/product_minimalist_watch_1790860181229.jpg'
+        image: '/assets/images/product_minimalist_watch_1790860181229.jpg'
       }
     ],
     deliveryAddress: {

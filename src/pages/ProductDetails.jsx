@@ -26,6 +26,7 @@ export default function ProductDetails() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [justAdded, setJustAdded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -33,6 +34,7 @@ export default function ProductDetails() {
       try {
         setLoading(true);
         setError(null);
+        setImageError(false);
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
         const prod = await productService.getProductById(id);
@@ -116,9 +118,10 @@ export default function ProductDetails() {
         <div className="lg:col-span-6">
           <div className="relative rounded-2xl overflow-hidden bg-slate-50 dark:bg-slate-800/60 aspect-square border border-slate-100 dark:border-slate-800">
             <img
-              src={product.image}
+              src={!imageError && product.image ? product.image : '/assets/images/placeholder.svg'}
               alt={product.name}
               referrerPolicy="no-referrer"
+              onError={() => setImageError(true)}
               className="w-full h-full object-cover object-center"
             />
           </div>

@@ -36,8 +36,8 @@ export default function OrderTimeline({ currentStatusCode = 4 }) {
                   isDone
                     ? 'bg-indigo-600 text-white'
                     : isCurrent
-                    ? 'border-2 border-indigo-600 bg-white dark:bg-slate-900 text-indigo-600 font-bold'
-                    : 'border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-300'
+                    ? 'border-2 border-indigo-600 bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 font-bold'
+                    : 'border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-400 dark:text-slate-600'
                 }`}
               >
                 {isDone ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : stepNum}
@@ -48,7 +48,7 @@ export default function OrderTimeline({ currentStatusCode = 4 }) {
                     ? 'text-indigo-600 dark:text-indigo-400 font-bold'
                     : isDone
                     ? 'text-slate-800 dark:text-slate-200'
-                    : 'text-slate-400'
+                    : 'text-slate-400 dark:text-slate-500'
                 }`}
               >
                 {step}
@@ -72,8 +72,8 @@ export default function OrderTimeline({ currentStatusCode = 4 }) {
                   isDone
                     ? 'bg-indigo-600 text-white'
                     : isCurrent
-                    ? 'border-2 border-indigo-600 text-indigo-600 font-bold'
-                    : 'border border-slate-300 text-slate-300'
+                    ? 'border-2 border-indigo-600 bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 font-bold'
+                    : 'border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-400 dark:text-slate-600'
                 }`}
               >
                 {isDone ? <Check className="w-3 h-3" /> : stepNum}
@@ -84,7 +84,7 @@ export default function OrderTimeline({ currentStatusCode = 4 }) {
                     ? 'font-bold text-indigo-600 dark:text-indigo-400'
                     : isDone
                     ? 'font-medium text-slate-800 dark:text-slate-200'
-                    : 'text-slate-400'
+                    : 'text-slate-400 dark:text-slate-500'
                 }`}
               >
                 {step}

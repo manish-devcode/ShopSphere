@@ -38,9 +38,12 @@ export default function Cart() {
                 <div className="flex items-center gap-4 min-w-0">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-slate-50 dark:bg-slate-800 shrink-0 border border-slate-100 dark:border-slate-800">
                     <img
-                      src={item.image}
+                      src={item.image || '/assets/images/placeholder.svg'}
                       alt={item.name}
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        e.currentTarget.src = '/assets/images/placeholder.svg';
+                      }}
                       className="w-full h-full object-cover"
                     />
                   </div>

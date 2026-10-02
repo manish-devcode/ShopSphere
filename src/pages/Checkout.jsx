@@ -147,14 +147,14 @@ export default function Checkout() {
                         <span className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">
                           {addr.fullName}
                         </span>
-                        <div className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-slate-300'}`}>
+                        <div className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-slate-300 dark:border-slate-600'}`}>
                           {isSelected && <div className="w-1 h-1 rounded-full bg-white" />}
                         </div>
                       </div>
                       <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
                         {addr.house}, {addr.street}, {addr.city} — {addr.pincode}
                       </p>
-                      <p className="text-[11px] text-slate-400 mt-1">
+                      <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1">
                         Phone: {addr.phone}
                       </p>
                     </div>
@@ -186,7 +186,7 @@ export default function Checkout() {
                     className={`p-4 rounded-xl border text-left flex items-center justify-between transition-all ${
                       isSelected
                         ? 'border-indigo-600 bg-indigo-50/40 dark:bg-indigo-950/30'
-                        : 'border-slate-200 dark:border-slate-800 hover:border-slate-300'
+                        : 'border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700'
                     }`}
                   >
                     <div className="flex items-center gap-2.5">
@@ -195,7 +195,7 @@ export default function Checkout() {
                         {opt.name}
                       </span>
                     </div>
-                    <div className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-slate-300'}`}>
+                    <div className={`w-3.5 h-3.5 rounded-full border flex items-center justify-center ${isSelected ? 'border-indigo-600 bg-indigo-600' : 'border-slate-300 dark:border-slate-600'}`}>
                       {isSelected && <div className="w-1 h-1 rounded-full bg-white" />}
                     </div>
                   </button>
@@ -227,13 +227,13 @@ export default function Checkout() {
 
           <div className="space-y-2 text-xs sm:text-sm divide-y divide-slate-200/60 dark:divide-slate-700/60 pt-2 border-t border-slate-200/60 dark:border-slate-700/60">
             <div className="flex justify-between pt-1">
-              <span className="text-slate-500">Subtotal</span>
+              <span className="text-slate-500 dark:text-slate-400">Subtotal</span>
               <span className="font-semibold text-slate-900 dark:text-white tabular-nums">${subtotal}</span>
             </div>
             <div className="flex justify-between pt-2">
-              <span className="text-slate-500">Delivery</span>
+              <span className="text-slate-500 dark:text-slate-400">Delivery</span>
               <span className="font-semibold text-slate-900 dark:text-white tabular-nums">
-                {deliveryFee === 0 ? <span className="text-emerald-600">Free</span> : `$${deliveryFee}`}
+                {deliveryFee === 0 ? <span className="text-emerald-600 dark:text-emerald-400">Free</span> : `$${deliveryFee}`}
               </span>
             </div>
             <div className="flex justify-between pt-2 text-base">

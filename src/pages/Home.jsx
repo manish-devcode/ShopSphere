@@ -91,9 +91,12 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden bg-slate-100 dark:bg-slate-800 aspect-[4/3] shadow-md border border-slate-200/80 dark:border-slate-800">
                 <img
-                  src="/src/assets/images/hero_ecommerce_showcase_1790860157305.jpg"
+                  src="/assets/images/hero_ecommerce_showcase_1790860157305.jpg"
                   alt="ShopSphere Premium Collection"
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = '/assets/images/placeholder.svg';
+                  }}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -232,7 +235,7 @@ export default function Home() {
 
       {/* 5. One Clean Promotional Banner */}
       <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full mb-12">
-        <div className="rounded-3xl bg-slate-900 dark:bg-slate-800/80 text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="rounded-3xl bg-slate-900 dark:bg-slate-850 dark:bg-slate-900 border border-slate-800/80 text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
             <span className="text-xs font-semibold text-indigo-400 uppercase tracking-wider">
               Special Collection

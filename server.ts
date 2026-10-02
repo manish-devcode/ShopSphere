@@ -52,6 +52,13 @@ async function startServer() {
   app.use('/api/users', userRoutes);
   app.use('/api/addresses', addressRoutes);
 
+  // Static assets serving for images (both /assets and /src/assets paths)
+  app.use('/assets', express.static(path.resolve(__dirname, 'dist', 'assets')));
+  app.use('/assets', express.static(path.resolve(__dirname, 'public', 'assets')));
+  app.use('/src/assets', express.static(path.resolve(__dirname, 'public', 'src', 'assets')));
+  app.use('/src/assets', express.static(path.resolve(__dirname, 'public', 'assets')));
+  app.use('/src/assets', express.static(path.resolve(__dirname, 'src', 'assets')));
+
   // Unmatched /api/* routes should return 404 JSON
   app.all('/api/*', (_req, res) => {
     res.status(404).json({
